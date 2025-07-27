@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mức độ ưu tiên</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" href="priority_level.css"
+        <!-- Internal va External co muc do uu tien bang nhau, cai nao viet sau thi duoc dung sau 
+            Internal=External
+            Inline - 1000
+            #id - 100
+            .class - 10
+            tag - 1
+            equal specficity
+            universal selector and inherited
+            cang nhieu diem thi muc uu tien cang cao
+        -->
+        <style>
+            h1#heading-id
+            {
+                color: orange
+            }
+            #heading-id.heading-class
+            {
+                color: black
+            }
+            
+            .heading-class
+            {
+                color:yellow
+            }
+            h1{
+                color: var(--text-color);
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1 class = "heading-class" id="heading-id">PRIORITY</h1>
+        </div>
+        <ul>
+            <li><h1>Dong 1</h1></li>
+            <li>Dong 2</li>
+            <li>Dong 3</li>
+            <h1>Dong 4</h1>
+        </ul>
+    </body>
+</html>
